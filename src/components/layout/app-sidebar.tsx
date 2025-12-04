@@ -63,7 +63,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <Icons.zynetic className="size-9" />
         </div>
       </SidebarHeader>
@@ -89,7 +89,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarContent>
       <SidebarFooter>
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <Image src={AvatarImg} alt="Avatar" height={40} width={40} />
         </div>
       </SidebarFooter>

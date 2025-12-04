@@ -1,6 +1,6 @@
 export default function TicketsPage() {
   return (
-    <div className="flex justify-center items-center h-full">
+    <div className="flex h-full items-center justify-center">
       <h1>Tickets</h1>
     </div>
   );
