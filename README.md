@@ -2,6 +2,10 @@
 
 A pixel-perfect frontend replica of the Charger Digital Twin user interface built with Next.js, React, TypeScript, and Tailwind CSS.
 
+🔗 **Live Demo:** [https://charger-digital-twin-ui.vercel.app/](https://charger-digital-twin-ui.vercel.app/)
+
+🎥 **Demo Video:** [Watch on Loom](https://www.loom.com/share/9dea356159044966b38df70920fcdc55)
+
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![React](https://img.shields.io/badge/React-19-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
