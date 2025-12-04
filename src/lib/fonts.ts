@@ -1,4 +1,8 @@
-import { IBM_Plex_Mono as FontMono, Exo_2 as FontSans } from "next/font/google";
+import {
+  IBM_Plex_Mono as FontMono,
+  Exo_2 as FontSans,
+  DM_Sans as FontDmSans,
+} from "next/font/google";
 
 export const fontSans = FontSans({
   weight: ["400", "500", "600"],
@@ -12,4 +16,11 @@ export const fontMono = FontMono({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-mono",
+});
+
+export const fontDmSans = FontDmSans({
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
 });

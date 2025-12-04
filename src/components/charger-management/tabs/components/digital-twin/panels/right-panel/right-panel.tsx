@@ -1,11 +1,15 @@
+"use client";
+
 import { getIcon, getStatusIcon } from "@/assets/icons";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { notifications } from "../data";
+import { useNotifications } from "@/hooks/use-notifications";
 import { Notification } from "../types";
 import { formatNotificationTimestamp } from "@/lib/utils/format-timestamp";
 import { cn } from "@/lib/utils";
 
 export function RightPanel({ className }: { className?: string }) {
+  const { notifications, isLoading } = useNotifications();
+
   return (
     <div
       className={cn(
@@ -17,11 +21,17 @@ export function RightPanel({ className }: { className?: string }) {
     >
       <Header />
       <ScrollArea className="min-h-0 flex-1">
-        <div className="flex flex-col gap-3">
-          {notifications.map((notification, index) => (
-            <NotificationCard key={index} notification={notification} />
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="flex items-center justify-center py-8">
+            <p className="text-xs text-[#ADB7D2]">Loading notifications...</p>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-3">
+            {notifications.map((notification, index) => (
+              <NotificationCard key={index} notification={notification} />
+            ))}
+          </div>
+        )}
       </ScrollArea>
     </div>
   );

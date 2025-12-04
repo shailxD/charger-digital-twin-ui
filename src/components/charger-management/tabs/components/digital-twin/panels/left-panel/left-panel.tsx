@@ -36,28 +36,35 @@ export function LeftPanel({ className }: { className?: string }) {
           "w-full max-w-[350px]"
         )}
       >
-        <button
+        <NavButton
+          icon="longarrow_left"
           onClick={handlePrev}
           disabled={isFirst}
-          className="cursor-pointer"
-        >
-          {getIcon(
-            "longarrow_left",
-            cn("size-5", isFirst ? "text-[#444851]" : "text-[#ADB7D2]")
-          )}
-        </button>
+        />
         <p className="text-sm text-[#AEAEAE]">{view}</p>
-        <button
+        <NavButton
+          icon="longarrow_right"
           onClick={handleNext}
           disabled={isLast}
-          className="cursor-pointer"
-        >
-          {getIcon(
-            "longarrow_right",
-            cn("size-5", isLast ? "text-[#444851]" : "text-[#ADB7D2]")
-          )}
-        </button>
+        />
       </div>
     </div>
   );
 }
+
+const NavButton = ({
+  icon,
+  onClick,
+  disabled,
+}: {
+  icon: string;
+  onClick: () => void;
+  disabled: boolean;
+}) => (
+  <button onClick={onClick} disabled={disabled} className="cursor-pointer">
+    {getIcon(
+      icon,
+      cn("size-5", disabled ? "text-[#444851]" : "text-[#ADB7D2]")
+    )}
+  </button>
+);

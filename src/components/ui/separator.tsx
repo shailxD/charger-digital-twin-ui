@@ -38,7 +38,7 @@ function ShadowSeparator({
     <div
       className={cn(
         "relative shrink-0 overflow-hidden",
-        orientation === "horizontal" ? "h-5 w-full" : "h-full w-5",
+        orientation === "horizontal" ? "h-2 w-full" : "h-full w-5",
         className
       )}
       {...props}
@@ -46,11 +46,11 @@ function ShadowSeparator({
       <div
         className={cn(
           "absolute rounded-[100%] bg-transparent shadow-[0_0_8px_black] dark:shadow-[0_0_8px_rgba(255,255,255,0.5)]",
-          orientation === "horizontal" ? "h-5 w-full" : "h-full w-5",
+          orientation === "horizontal" ? "h-2 w-full" : "h-full w-5",
           orientation === "vertical" && side === "right" && "left-5",
           orientation === "vertical" && side === "left" && "right-5",
-          orientation === "horizontal" && side === "bottom" && "top-5",
-          orientation === "horizontal" && side === "top" && "bottom-5"
+          orientation === "horizontal" && side === "bottom" && "top-2",
+          orientation === "horizontal" && side === "top" && "bottom-2"
         )}
       />
     </div>
